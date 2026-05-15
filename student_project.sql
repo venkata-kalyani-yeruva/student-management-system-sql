@@ -58,3 +58,41 @@ SELECT * FROM students ORDER BY marks DESC;
 -- lowest to highest
 SELECT * FROM students ORDER BY marks ASC;
 SELECT * FROM students WHERE marks BETWEEN 80 AND 95;
+
+-- and
+SELECT * from students WHERE branch = 'ece' AND marks>85;
+--or
+SELECT * from students where branch='mech' or branch='csd'
+-- order by
+SELECT * from students ORDER BY marks DESC;
+SELECT * from students ORDER BY marks ASC;
+-- between
+SELECT * from students where marks BETWEEN 80 AND 85;
+--like
+SELECT * from students WHERE name Like 'k%';
+SELECT * from students WHERE name like '%a';
+-- count
+SELECT COUNT(*) from students;
+--avg
+SELECT AVG(marks) from students;
+--max
+SELECT MAX(marks) from students;
+--min
+SELECT MIN(marks) from students;
+--group by
+SELECT branch,avg(marks) from students GROUP BY branch;
+SELECT branch,min(marks) from students GROUP BY branch;
+SELECT branch,max(marks) from students GROUP BY branch;
+SELECT branch,sum(marks) from students GROUP BY branch;
+-- having clause
+select branch,avg(marks) from students group by branch having avg(marks)>90;
+select branch,count(*) from students group by branch having count(*)>2;
+select branch,sum(marks) from students group by branch having sum(marks) >100;
+select branch,min(marks) from students group by branch having min(marks)<70;
+select branch,avg(marks) from students group by branch having avg(marks)>75;
+select branch,sum(marks) from students group by branch having sum(marks)>90;
+select branch,count(*) from students group by branch having count(*)>3;
+select branch,min(marks) from students group by branch having min(marks)>70;
+select branch,avg(age) from students group by branch having avg(age)>21;
+select gender,count(*) from students group by gender having count(*)>2;
+
