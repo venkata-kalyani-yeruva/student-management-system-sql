@@ -100,9 +100,5 @@ Through this project, I learned:
 - Build Full Stack Database Projects
 
 ---
-
-## Author
-Kalyani Yeruva
-
 ## 👩‍💻 Author
 Kalyani Yeruva
